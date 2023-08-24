@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main(){
+	
+	srand(time(NULL));
+	
+	int v[100], num,i;
+	
+	for(i=0;i<100;i++){
+		v[i] = rand() % 100 + 1;
+		printf("\nA: %d",v[i]);
+	}
+	
+	printf("\nDigite um numero: ");
+	scanf("%d",&num);
+	
+	
+	int encontrado = 0;
+	
+	
+	for(i=0;i<100;i++){
+		v[i] = rand() % 100 + 1;
+		if(v[i] == num){
+			printf("O numero %d foi encontrado no vetor na posicao %d",num,i);
+			
+			encontrado = 1;
+			break;
+		}
+	}
+	
+	if(!encontrado){
+		printf("O numero %d nao foi encontrado no vetor\n",num);
+	}
+	
+	return 0;
+	
+}
