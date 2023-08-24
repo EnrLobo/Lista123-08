@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <time.h>
+
+int main(){
+	
+	srand(time(NULL));
+	
+	int v[5], vat[5], vot[5], num;
+	int i;
+	
+	for(i=0;i<5;i++){
+		//Geração aleatória dos números
+		v[i] = rand() % 100 + 1;
+		vat[i] = rand() % 100 + 1;
+		
+		//Armazenando os valores
+		
+		int x,y;
+		
+		x = v[i];
+		y = vat[i];
+		
+		//Multiplicando os de mesma posição
+		
+		vot[i] = x*y;
+	}
+	
+	//Exibição
+	
+	for(i=0;i<5;i++){
+		printf("%d x %d = %d\n", v[i], vat[i], vot[i]);
+	}
+	
+	return 0;
+	
+}
