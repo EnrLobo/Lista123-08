@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+	
+	int  tam, inv, i;
+	char v[100];
+	
+	printf("Digite uma string(max.100 caracteres): ");
+	gets(v);
+	
+	tam = strlen(v);
+	
+	printf("\nORDEM INVERSA\n");
+	
+	for(i=tam;i>=0;i--){
+		printf("%c",v[i]);
+	}
+	
+	return 0;
+	
+}
