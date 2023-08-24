@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int igualVet(int vet[], int tam, int igual){
+	
+	int i;
+	int dado = 0;
+	
+	for(i=0;i<tam;i++){
+		if(vet[i] == igual)
+			dado = dado + 1;
+	}
+	return dado;
+}
+
+int main(){
+	
+	int i, num, v[100], t, soma;
+	
+	printf("Digite o tamanho do vetor que voce deseja: ");
+	scanf("%d",&t);
+	
+	for(i=0;i<t;i++){
+		printf("Digite um valor para a posição %d do vetor: ",i);
+		scanf("%d",&v[i]);
+	}
+	
+	printf("Digite um valor que voce deseja saber a quantidade de vezes que apareceu: ");
+	scanf("%d",&num);
+	
+	soma = igualVet(v, i, num);
+	
+	printf("Valores do vetor:\n");
+	
+	for(i = 0;i<t;i++){
+		printf("Vetor %d: %d\n", i+1, v[i]);
+	}
+
+	printf("\nEsse numero apareceu %d vez(es)",soma);
+	
+}
