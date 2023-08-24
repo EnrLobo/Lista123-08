@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+	
+	srand(time(NULL));
+	
+	int tam, arm, i, faces = 6, lanc;
+	int  result[faces];
+	
+	printf("Digite o numero de vezes que o dado sera lancado: ");
+	scanf("%d",&tam);
+	
+	for(i=0; i<faces;i++){
+		result[i] = 0;
+	}
+	
+	for(i=0;i<tam;i++){
+		//Lançamento dos dados
+		
+		lanc = rand() % faces + 1;
+		
+		result[lanc]++;
+		
+	}
+	
+	//Exibição
+	
+	printf("Resultado de vezes de cada face:\n");
+	
+	for (i=0;i<faces;i++){
+		printf("Face %d: %d ocorrencias\n",i + 1, result[i]);
+	}
+	
+	return 0;
+	
+}
