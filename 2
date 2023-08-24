@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void Menor(int *vet, int *tam, int *menor){
+	
+	int i;
+	
+	*menor = * vet;
+	
+	for(i=0;i<tam;i++){
+		
+		if(*menor > *(vet+i))
+			*menor = *(vet+i);		
+	}
+	
+}
+
+int main(){
+	
+	int i, menor,  v[10] ;
+	
+	for(i=0;i<10;i++){
+		printf("Digite um valor para a posicao %d do vetor: ",i);
+		scanf("%d",&v[i]);
+	}
+	
+	printf("Valores do vetor:\n");
+	
+	for(i=0;i<10;i++){
+		printf("Vetor %d: %d\n", i + 1, v[i]);
+	}
+	
+	Menor(v, 10, &menor);
+	
+	printf("\nMenor: %d", menor);
+	
+	return 0;
+	
+}
